@@ -1,0 +1,32 @@
+<div ng-controller="CtrlEdit">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <label for="">Nom</label>
+            </div>
+            <div class="col-md-6">
+                <input type="text" name="" id="" value="{{nomEdit}}" class="form-control" ng-model="nomEdit" >
+            </div>
+            <div class="col-md-6">
+                <label for="">Prénom</label>
+            </div>
+            <div class="col-md-6">
+                <input type="text" name="" id="" value="{{prenomEdit}}" class="form-control" ng-model="prenomEdit">
+            </div>
+            <div class="col-md-6">
+                <label for="">Age</label>
+            </div>
+            <div class="col-md-6">
+                <input type="text" name="" id="" value="{{ageEdit}}" class="form-control" ng-model="ageEdit">
+            </div>
+            <div class="col-md-12 text-center">
+                <p class="text-danger" >{{textalert0}}</p>
+                <p class="text-danger" >{{textalert1}}</p>
+            </div>
+            <div class="col-md-12">
+                <input type="submit" value="Valider" class="btn btn-primary btn-sm" ng-click="SaveEditEtudiant(ide)">
+            </div>
+        </div>
+        
+    </div>
+</div>

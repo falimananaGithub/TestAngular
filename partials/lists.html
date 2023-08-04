@@ -1,0 +1,44 @@
+<div ng-controller="CtrlList">
+    <div class="container">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Prénom</th>
+                    <th>Age</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="etudiant in etudiants">
+                    <td>{{ etudiant.nom}}</td>
+                    <td>{{etudiant.prenom}}</td>
+                    <td>{{etudiant.age}}</td>
+                    <td>
+                        <a href="" class="btn btn-sm btn-primary" ng-click="EditEtudiantForm(etudiant.id)">Edit</a>
+                        <a href="" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#my-modal{{etudiant.id}}">Suppr</a>
+                        <div id="my-modal{{etudiant.id}}" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="my-modal-title" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="my-modal-title">Title</h5>
+                                        <button class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Content</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <a href="" class="btn btn-primary btn-sm" ng-click="deleteEtudiant(etudiant.id)"> OK</a>
+                                        <a href="" class="btn btn-primary btn-sm " data-dismiss="modal"> Annuler</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
